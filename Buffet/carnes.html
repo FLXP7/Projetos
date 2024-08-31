@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffet - Carnes</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/CITY-BUFFET-30-08-2024.png" alt="Logo">
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carnes.html">Carnes</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="sobremesas.html">Sobremesas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titles">
+        <h1>Tipos de Carnes</h1>
+        <h2>Escolha suas Carnes</h2>
+    </div>
+    <main>        
+        <section class="container">  
+            <article class="card">
+                <img src="./img/Picanha.jpg" alt="Picanha" srcset="">
+                <p>Picanha - R$ 50,00/kg</p>
+            </article>
+                
+            <article class="card">
+                <img src="./img/Alcatra.jpg" alt="Alcatra" srcset="">
+                <p>Alcatra - R$ 40,00/kg</p>
+            </article>
+                
+            <article class="card">
+                <img src="./img/Maminha.jpg" alt="Maminha" srcset="">
+                <p>Maminha - R$ 35,00/kg</p>
+            </article>
+                
+            <article class="card">
+                <img src="./img/Fraldinha.jpg" alt="Fraldinha" srcset="">
+                <p>Fraldinha - R$ 45,00/kg</p>
+            </article>
+                
+            <article class="card">
+                <img src="./img/Coxão-Mole.jpg" alt="Coxão-Mole" srcset="">
+                <p>Coxão Mole - R$ 30,00/kg</p>
+            </article>           
+        </section>      
+    </main>
+    <form>
+        <label for="num-convidados">Número de Convidados:</label>
+        <input type="number" id="num-convidados" name="num-convidados" min="50">
+        <p>Quantidade total de carne necessária: <span id="carne-total">0</span> kg</p>
+    </form>
+    <script>
+        const inputConvidados = document.getElementById('num-convidados');
+        const carneTotal = document.getElementById('carne-total');
+        
+        inputConvidados.addEventListener('input', function() {
+            const convidados = parseInt(this.value);
+            if (convidados >= 50) {
+                const carne = (convidados * 0.3) * 1.06;
+                carneTotal.textContent = carne.toFixed(2);
+            } else {
+                carneTotal.textContent = '0';
+            }
+        });
+    </script>
+</body>
+</html>

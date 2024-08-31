@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffet - Bebidas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="./img/CITY-BUFFET-30-08-2024.png" alt="Logo">
+            <ul class="navbar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carnes.html">Carnes</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="sobremesas.html">Sobremesas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titles">
+        <h1>Quantidade de Bebidas</h1>
+        <h2>Seleção de Bebidas</h2>
+    </div>
+    <main>
+        <section class="container">
+        <article class="card">
+            <img src="./img/Coca-cola.png">
+            <p>Coca-Cola R$ 6,00/lata</p>
+        </article>
+        <article class="card">
+            <img src="./img/fanta-laranja.png">
+            <p>Fanta Laranja R$ 5,00/lata</p>
+        </article>
+        <article class="card">
+            <img src="./img/fanta-uva.jpg">
+            <p>Fanta Uva R$ 5,00/lata</p>
+        </article>
+        <article class="card">
+            <img src="./img/guarana.png">
+            <p>Guaraná Antártica R$ 4,50/lata</p>
+        </article>
+        <article class="card">
+            <img src="./img/sprite.jpg">
+            <p>Sprite R$ 6,50/lata</p>
+        </article>
+        </section>
+    </main>
+    <form>
+        <label for="num-convidados">Número de Convidados:</label>
+        <input type="number" id="num-convidados" name="num-convidados" min="50">
+        <p>Quantidade total de latas necessárias: <span id="bebida-total">0</span></p>
+    </form>
+    <script>
+        const inputConvidados = document.getElementById('num-convidados');
+        const bebidaTotal = document.getElementById('bebida-total');
+        
+        inputConvidados.addEventListener('input', function() {
+            const convidados = parseInt(this.value);
+            if (convidados >= 50) {
+                const bebida = (convidados * 3) * 9; 
+                bebidaTotal.textContent = bebida.toFixed(2);
+            } else {
+                bebidaTotal.textContent = '0';
+            }
+        });
+    </script>
+</body>
+</html>

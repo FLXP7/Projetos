@@ -1,0 +1,145 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #353535;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+header {
+    background-color: red;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+}
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+.navbar a:hover {
+    background-color: #353535;
+    border-radius: 5px;
+}
+main {
+    padding: 20px;
+}
+.logo {
+    height: 70px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding: 0;
+    margin: 0;
+}
+.box {
+    width: 400px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+.box .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.box .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.box:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+.box:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.titles h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titles h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    transition: all 400ms;
+    cursor: pointer;
+}
+.card img {
+    height: 200px;
+    width: 200px;
+}
+.card:hover {
+    transform: translateY(-20px);
+
+}
+.container:hover .card {
+    opacity: .5;
+}
+.container .card:hover{
+    opacity: 1;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input[type="number"] {
+    padding: 5px;
+    border-radius: 15px;
+}
