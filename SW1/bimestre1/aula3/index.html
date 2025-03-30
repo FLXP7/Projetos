@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>                         
+    <title>Autentica Formulário</title>
+</head>
+<body>
+    <form id="form-autentica" class="form-container">
+        <label for="usuario">Usuário</label>
+        <input type="text" name="user" id="usuario" placeholder="Insira seu usuário" required> <!-- required = campo de preenchimento obrigatório-->
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Insira sua senha" required>
+
+        <!--Vamos inserir um botão que irá chamar nossa função no js. Vamos adicionar um evento de clique para funcionar quando for clicado-->
+
+        <button type="button" onclick="autenticar()"> Entrar</button>
+        <!-- Quando a função autenticar() for acionada e executada, deverá aparecer uma mensagem no HTML, para dizer se o usuário foi autenticado ou não. Para isso, vamos criar um tag de paragrafo com o id "mensagem"-->
+    </form>
+    <p id="mensagem"></p>
+</body>
+</html>
